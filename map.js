@@ -1,17 +1,25 @@
+// 888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
 let map, infoWindow;
+
+let user = JSON.parse(localStorage.getItem("user"));
+if (!user) {
+  window.location.href = "./index.html";
+}
+
+console.log(user);
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -30.5595, lng: 25.9375 },
+    center: { lat: -33.9856951, lng: 18.492864800000003 },
     zoom: 6,
   });
-  22.9375;
   infoWindow = new google.maps.InfoWindow();
   const locationButton = document.createElement("button");
-  locationButton.textContent = "Pin Current Location";
+  locationButton.textContent = "Pan to Current Location";
   locationButton.classList.add("custom-map-control-button");
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
   locationButton.addEventListener("click", () => {
+    // Try HTML5 geolocation.
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -29,6 +37,7 @@ function initMap() {
         }
       );
     } else {
+      // Browser doesn't support Geolocation
       handleLocationError(false, infoWindow, map.getCenter());
     }
   });
@@ -43,3 +52,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   );
   infoWindow.open(map);
 }
+
+33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333335;
+33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333;
+33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333;

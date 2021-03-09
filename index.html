@@ -7,29 +7,42 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <header class="landing">
-      <div class="login">
-        <h1>LOGIN</h1>
+    <div id="preloader">
+      <div id="loader"></div>
+    </div>
 
-        <div class="textbox">
-          <input type="text" placeholder="Username" name="name " value="" />
-        </div>
+    <form id="login-form" onsubmit="event.preventDefault(); login();">
+      <header class="landing">
+        <div class="login">
+          <h1>LOGIN</h1>
 
-        <div class="textbox">
+          <div class="textbox">
+            <input type="text" placeholder="Username" name="name " value="" />
+          </div>
+
+          <div class="textbox">
+            <input
+              type="password"
+              placeholder="Password"
+              name=""
+              value=""
+              show="*"
+            />
+          </div>
+
           <input
-            type="password"
-            placeholder="Password"
+            class="btn"
+            type="button"
             name=""
-            value=""
-            show="*"
+            value="Login"
+            onclick="login()"
           />
         </div>
-
-        <input class="btn" type="button" name="" value="Login" />
-      </div>
-      <button class="reg-btn">
-        <a href="register.html"> Register </a>
-      </button>
-    </header>
+        <button class="reg-btn">
+          <a href="register.html"> Register </a>
+        </button>
+      </header>
+      <script src="index.js"></script>
+    </form>
   </body>
 </html>

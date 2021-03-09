@@ -17,7 +17,7 @@ h1 {
 }
 
 .register {
-  width: 280px;
+  width: 380px;
   color: rgb(255, 254, 254);
   background: rgba(0, 0, 0, 0.6);
   display: flex;
@@ -50,6 +50,11 @@ h1 {
 }
 .textbox {
   margin-bottom: 16px;
+}
+.btn {
+  border: none;
+  font-size: 20px;
+  border-radius: 20px;
 }
 .btn:hover {
   cursor: pointer;

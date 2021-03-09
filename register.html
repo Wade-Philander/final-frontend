@@ -8,10 +8,7 @@
   </head>
   <body>
     <header class="landing">
-      <form
-        action="https://evening-fortress-12445.herokuapp.com/add-new-user/"
-        method="POST"
-      >
+      <form id="register-form" onsubmit="event.preventDefault(); register()">
         <div class="register">
           <h1>REGISTER HERE</h1>
 
@@ -36,17 +33,15 @@
               value=""
             />
           </div>
-
           <div class="textbox">
             <input type="text" placeholder="City" name="city" value="" />
           </div>
 
-          <button class="btn" type="submit" value="">
-            Confirm Registration
-          </button>
+          <button class="btn" value="">Confirm Registration</button>
         </div>
       </form>
     </header>
     <script src="register.js"></script>
+    <script src="profile.js"></script>
   </body>
 </html>
