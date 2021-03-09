@@ -1,30 +1,23 @@
-function view_profile() {
-  const form = document.getElementById("register-form");
-  const inputs = form.getElementsByTagName("input");
-  const users = {
-    name: inputs[0].value,
-    username: inputs[1].value,
-    password: inputs[2].value,
-    city: inputs[3].value,
-  };
-
-  let logged = users.filter((user) => {
-    return user.username == username && user.password == password;
-  });
-  console.log(logged);
+// console.log(user_data);
+function mod() {
+  let user_data = JSON.parse(localStorage.getItem("user"));
+  let modal = `
+  <div class ="user_info" id="user${user_data.id} style =">
+     <p id="name"> Name : ${user_data.name} </p>
+     <p id="username"> Username : ${user_data.username} </p>
+     <p id="password"> Password : ${user_data.password} </p>
+     <p id="city"> Location : ${user_data.city} </p>
+  </div>
+  
+   `;
+  console.log("Hello ", user_data);
+  let body = document.getElementById("user-data");
+  body.innerHTML += modal;
 }
+mod();
 
-// function mod() {
-//   let modal = `
-//   <div class ="modal" id="user${users.id}" style="top: -100%">
-//   // <img id="display" src="${users.image}"/>
-//   <div class="user-info">
-//     <p1 id="name"> Name : ${users.name} </p1>
-//     <p1 id="username"> Username : ${users.username} </p1>
-//     <p1 id="password"> Password : ${users.password} </p1>
-//     <p1 id="city"> Location : ${users.city} </p1>
-//   </div>
-//   `;
-//   let body = document.getElementById("profile");
-//   body.innerHTML += modal;
-// }
+function delete(id) {
+  if (confirm("Are you sure you want to delete your profile")) {
+    fetch;
+  }
+}

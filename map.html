@@ -3,49 +3,51 @@
   <head>
     <title>Geolocation</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" href="map.css" />
+    <link href="map.css" rel="stylesheet" />
     <script src="./map.js"></script>
-    <link rel="stylesheet" href="profile.css" />
-    <link rel="stylesheet" href="modal.css" />
+    <link href="profile.css" rel="stylesheet" />
+    <link href="modal.css" rel="stylesheet" />
   </head>
   <body>
     <div id="preloader">
       <div id="loader"></div>
     </div>
-
     <div class="container">
       <div class="logo">
         <img
           src="AAAABTznQksO0Pk8RC1z_MxyimGRKcFdeB-MDYm11hbFb0DliXprj3GAvfuiuEynzMPHxZm0bN1KZHdMeXsfdVgrJc2Ma1b3tWba6hFU.png"
         />
       </div>
-      <input id="input" class="controls" placeholder="Search Box" />
-
+      <input class="controls" id="input" placeholder="Search" />
       <!-- Trigger/Open The Modal -->
-      <button id="myBtn" style="vertical-align: middle">
-        <span>View Profile </span>
+      <button id="myBtn" onclick="mod()" style="vertical-align: middle">
+        <span>View Profile</span>
       </button>
-
       <!-- The Modal -->
-      <div id="myModal" class="modal">
+      <div class="modal" id="myModal">
         <!-- Modal content -->
         <div class="modal-content">
-          <span class="close">&times;</span>
-          <h1>YOUR PROFILE</h1>
-          <img src="display.png" />
+          <span class="close">&times;</span> <img src="display.png" />
+
+          <div class="two">
+            <h1 class="header">YOUR PROFILE</h1>
+            <div class="user-data" id="user-data">
+              <button class="button button1">Update profile</button>
+              <button class="button button2" onclick="">Delete Profile</button>
+              <!-- <button class="button button3">About</button> -->
+            </div>
+          </div>
         </div>
       </div>
-
       <div id="profile"></div>
     </div>
-
     <div id="map"></div>
-
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script src="modal.js"></script>
+    <script src="./profile.js"></script>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCibzgsrEW9R1dzGRVbGlYuFOnVtGFPerA&callback=initMap&libraries=&v=weekly"
       async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCibzgsrEW9R1dzGRVbGlYuFOnVtGFPerA&callback=initMap&libraries=&v=weekly"
     ></script>
   </body>
 </html>
