@@ -16,8 +16,14 @@ function mod() {
 }
 mod();
 
-function delete(id) {
+function dlt(id) {
   if (confirm("Are you sure you want to delete your profile")) {
-    fetch;
+    fetch(`https://still-reaches-42847.herokuapp.com/delete-user`, {
+      method: "DELETE",
+    });
+    console(id);
+  } else {
+    alert("Cancel");
+    console.log("not saved");
   }
 }

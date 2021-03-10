@@ -8,7 +8,7 @@ function register() {
     city: inputs[3].value,
   };
 
-  fetch("http://127.0.0.1:5000/add-new-user/", {
+  fetch("https://still-reaches-42847.herokuapp.com/add-new-user/", {
     method: "POST",
     body: JSON.stringify(user),
     headers: {

@@ -22,7 +22,7 @@
 // }
 
 let users;
-fetch("http://127.0.0.1:5000/show-users/")
+fetch("https://still-reaches-42847.herokuapp.com/show-users/")
   .then((res) => res.json())
   .then((data) => {
     console.log(data);
