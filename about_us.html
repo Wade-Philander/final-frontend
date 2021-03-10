@@ -3,6 +3,7 @@
   <head>
     <title>About-us Page</title>
     <link rel="stylesheet" a href="about.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script
       src="https://kit.fontawesome.com/366539c517.js"
       crossorigin="anonymous"
@@ -47,7 +48,12 @@
           </p>
         </div>
         <div class="grid-8 form">
-          <form action=" " method="post" id="contact_form" name="contactForm">
+          <form
+            action="https://formspree.io/f/xwkwglqp"
+            method="POST"
+            id="contact_form"
+            name="contactForm"
+          >
             <div class="form-inline clearfix">
               <div class="form-group grid-6">
                 <input
@@ -63,7 +69,7 @@
                   type="email"
                   placeholder="email address"
                   id="exampleInputEmail"
-                  name="email"
+                  name="_replyto"
                   class="form-control"
                 />
               </div>
@@ -105,6 +111,10 @@
               </div>
               <!-- error message -->
             </div>
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LdFfXkaAAAAAPgBnK5UEBZq-zX-wVoTNRd6FGUe"
+            ></div>
             <div id="submit" class="form-group grid-12">
               <input
                 type="submit"
