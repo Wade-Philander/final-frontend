@@ -12,6 +12,7 @@
     <div id="preloader">
       <div id="loader"></div>
     </div>
+
     <div class="container">
       <div class="logo">
         <img
@@ -38,10 +39,12 @@
             <h1 class="header">YOUR PROFILE</h1>
             <div class="user-data" id="user-data">
               <button class="button button1">Update profile</button>
+
               <button class="button button2" onclick="dlt()">
                 Delete Profile
               </button>
-              <!-- <button class="button button3">About</button> -->
+
+              <button class="button button3" onclick="clr()">Log Out</button>
             </div>
           </div>
         </div>
@@ -51,7 +54,7 @@
     <div id="map"></div>
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script src="modal.js"></script>
-    <script src="./profile.js"></script>
+    <script src="profile.js"></script>
     <script
       async
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCibzgsrEW9R1dzGRVbGlYuFOnVtGFPerA&callback=initMap&libraries=&v=weekly"

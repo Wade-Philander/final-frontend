@@ -16,14 +16,30 @@ function mod() {
 }
 mod();
 
-function dlt(id) {
+function dlt() {
+  let user = JSON.parse(localStorage.getItem("user"));
+  let id = user.id;
   if (confirm("Are you sure you want to delete your profile")) {
-    fetch(`https://still-reaches-42847.herokuapp.com/delete-user`, {
-      method: "DELETE",
-    });
-    console(id);
+    fetch(`https://still-reaches-42847.herokuapp.com/delete-user/${id}/`)
+      .then((response) => response.json())
+      .then(function (data) {
+        alert("Profile deleted succesfully!");
+        window.location.href = "./index.html";
+      });
   } else {
     alert("Cancel");
     console.log("not saved");
+  }
+}
+
+function clr() {
+  let user = JSON.parse(localStorage.getItem("user"));
+  let id = user.id;
+  if (confirm("Would you like to log out?")) {
+    localStorage.clear();
+    alert("Logged out!");
+    window.location.href = "./index.html";
+  } else {
+    alert("Cancel");
   }
 }
