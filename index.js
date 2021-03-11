@@ -1,26 +1,3 @@
-// function login() {
-//   const form = document.getElementById("login-form");
-//   const inputs = form.getAttributeNames("input");
-//   const user = {
-//     username: input[0].value,
-//     password: input[1].value,
-//   };
-
-//   fetch("http://127.0.0.1:5000/add-new-user/", {
-//     method: "GET",
-//     body: JSON.stringify(user),
-//     header: {
-//       "Content-type": "application/json; charset=UTF-8",
-//     },
-//   })
-//     .then((response) => response.json())
-//     .then((json) => {
-//       alert(json.msg);
-//       window.location.href = "./map.html";
-//     })
-//     .catch((e) => alert(e));
-// }
-
 let users;
 fetch("https://still-reaches-42847.herokuapp.com/show-users/")
   .then((res) => res.json())
