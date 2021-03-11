@@ -145,3 +145,26 @@ body {
   opacity: 1;
   right: 0;
 }
+
+@media (max-width: 667px) {
+  .modal-content .header {
+    font-size: 34px;
+    text-align: center;
+  }
+  .modal-content .text {
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+  }
+  .modal-content img {
+    height: 50%;
+    width: 50%;
+  }
+
+  .model-content {
+    width: 100%;
+  }
+  .two {
+    margin: 0;
+  }
+} ;
